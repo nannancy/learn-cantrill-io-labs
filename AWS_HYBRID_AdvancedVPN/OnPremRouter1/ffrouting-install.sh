@@ -46,8 +46,9 @@ sudo adduser --system --ingroup frr --home /var/run/frr/ \
 sudo usermod -a -G frrvty frr
 
 cd /tmp
-git clone https://github.com/frrouting/frr.git frr
-cd frr
+wget https://github.com/FRRouting/frr/archive/frr-7.5.1.tar.gz
+tar -xvzf frr-7.5.1.tar.gz
+cd frr-7.5.1
 ./bootstrap.sh
 ./configure \
     --prefix=/usr \
